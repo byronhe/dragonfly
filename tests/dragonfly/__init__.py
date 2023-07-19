@@ -135,8 +135,8 @@ class DflyInstance:
     def mc_port(self) -> Optional[int]:
         if self.params.existing_mc_port:
             return self.params.existing_mc_port
-        if "mc_port" in self.args:
-            return int(self.args["mc_port"])
+        if "memcached_port" in self.args:
+            return int(self.args["memcached_port"])
         return None
 
     def get_port_from_lsof(self) -> int:
